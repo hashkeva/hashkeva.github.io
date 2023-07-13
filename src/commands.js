@@ -6,7 +6,7 @@ export type CommandType = {|
     searchurl?: string,
 |};
 
-export type CommandNames = 'fb' | 'wa' | 'gm' | 'yt' | 'gh' | 'r' | 'l' | 'tw' | 'vs' | 'todo' |
+export type CommandNames = 'fb' | 'wa' | 'gm' | 'yt' | 'gh' | 'r' | 'l' | 'tw' | 'vs' | 'todo' | 'nas' | 'immi' | 'port' |
                            'c' | '$' | 'cal' | 'n' | 'pv' | 'gd' | 'wsj' | 'cnn' | 'g' | 'DEFAULT';
 
 export type CommandDataTableType = {|
@@ -108,6 +108,18 @@ export const COMMANDS: {[CommandNames] : CommandType} = {
     todo: {
         name: "Microsoft To Do",
         url: "https://to-do.live.com"
+    },
+    nas: {
+        name: "Home NAS",
+        url: "http://homeserver.local"
+    },
+    immi: {
+        name: "Home Immich",
+        url: "http://homeserver.local:2283"
+    },
+    port: {
+        name: "Home Port",
+        url: "http://homeserver.local:9000"
     },
     DEFAULT: {
         name: "Default - Google Search",
