@@ -6,7 +6,7 @@ export type CommandType = {|
     searchurl?: string,
 |};
 
-export type CommandNames = 'fb' | 'wa' | 'gm' | 'yt' | 'gh' | 'r' | 'l' | 'tw' | 'vs' | 'todo' | 'nas' | 'immi' | 'port' |
+export type CommandNames = 'fb' | 'wa' | 'gm' | 'yt' | 'gh' | 'r' | 'l' | 'tw' | 'vs' | 'todo' | 'nas' | 'immi' | 'port' | 'f' |
                            'c' | '$' | 'cal' | 'n' | 'pv' | 'gd' | 'wsj' | 'cnn' | 'g' | 'DEFAULT';
 
 export type CommandDataTableType = {|
@@ -120,6 +120,10 @@ export const COMMANDS: {[CommandNames] : CommandType} = {
     port: {
         name: "Home Port",
         url: "http://homeserver.local:9000"
+    },
+    f: {
+        name: "Fidelity",
+        url: "https://digital.fidelity.com/prgw/digital/login/full-page?AuthRedUrl=https://digital.fidelity.com/ftgw/digital/portfolio/summary"
     },
     DEFAULT: {
         name: "Default - Google Search",
