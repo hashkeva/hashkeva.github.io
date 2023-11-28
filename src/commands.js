@@ -6,7 +6,7 @@ export type CommandType = {|
     searchurl?: string,
 |};
 
-export type CommandNames = 'fb' | 'wa' | 'gm' | 'yt' | 'gh' | 'r' | 'l' | 'tw' | 'vs' | 'todo' | 'nas' | 'immi' | 'port' | 'f' | 'email' |
+export type CommandNames = 'fb' | 'wa' | 'email' | 'yt' | 'gh' | 'r' | 'l' | 'tw' | 'vs' | 'todo' | 'nas' | 'immi' | 'port' | 'f' |
                            'c' | '$' | 'cal' | 'n' | 'pv' | 'gd' | 'wsj' | 'cnn' | 'g' | 'DEFAULT';
 
 export type CommandDataTableType = {|
@@ -30,7 +30,7 @@ export const COMMANDS: {[CommandNames] : CommandType} = {
         name: "WhatsApp Desktop App",
         url: "whatsapp://",
     },
-    gm: {
+    email: {
         name: "Gmail",
         url: "https://mail.google.com/mail/u/0",
         searchurl: "https://mail.google.com/mail/u/"
@@ -124,10 +124,6 @@ export const COMMANDS: {[CommandNames] : CommandType} = {
     f: {
         name: "Fidelity",
         url: "https://digital.fidelity.com/prgw/digital/login/full-page?AuthRedUrl=https://digital.fidelity.com/ftgw/digital/portfolio/summary"
-    },
-    email: {
-        name: "Gmail",
-        url: "https://mail.google.com/mail/u/0/#inbox"
     },
     DEFAULT: {
         name: "Default - Google Search",
