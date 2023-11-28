@@ -6,7 +6,7 @@ export type CommandType = {|
     searchurl?: string,
 |};
 
-export type CommandNames = 'fb' | 'wa' | 'gm' | 'yt' | 'gh' | 'r' | 'l' | 'tw' | 'vs' | 'todo' | 'nas' | 'immi' | 'port' | 'f' |
+export type CommandNames = 'fb' | 'wa' | 'gm' | 'yt' | 'gh' | 'r' | 'l' | 'tw' | 'vs' | 'todo' | 'nas' | 'immi' | 'port' | 'f' | 'email' |
                            'c' | '$' | 'cal' | 'n' | 'pv' | 'gd' | 'wsj' | 'cnn' | 'g' | 'DEFAULT';
 
 export type CommandDataTableType = {|
@@ -124,6 +124,10 @@ export const COMMANDS: {[CommandNames] : CommandType} = {
     f: {
         name: "Fidelity",
         url: "https://digital.fidelity.com/prgw/digital/login/full-page?AuthRedUrl=https://digital.fidelity.com/ftgw/digital/portfolio/summary"
+    },
+    email: {
+        name: "Gmail",
+        url: "https://mail.google.com/mail/u/0/#inbox"
     },
     DEFAULT: {
         name: "Default - Google Search",
