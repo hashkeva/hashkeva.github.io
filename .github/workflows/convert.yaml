@@ -15,6 +15,7 @@ jobs:
       - name: Convert from Flow to Browser JS, bundle and minify files
         run:
           npm install
+          npm run prepublish
           npm run build 
           npm run bundle
           npm run minify
